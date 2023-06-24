@@ -119,14 +119,14 @@ form {
 }
 
 .form-row label {
-  width: 300px;
+  width: 360px;
   margin-right: 10px;
   text-align: left;
 }
 
 .form-row select {
   flex: 1;
-  width: 300px;
+  width: 400px;
 }
 
   /* Responsividade */
