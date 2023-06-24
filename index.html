@@ -37,18 +37,18 @@
     <p>Por favor, preencha o formulário abaixo com as informações necessárias. Entraremos em contato assim que possível.</p>
   </div>
   <div class="content">
-    <form method="post">
-      <label for="nome">Nome Completo:</label>
-      <input type="text" id="nome" name="nome" required><br><br>
+    <form action="https://formsubmit.co/Viniciusmachadok9@gmail.com" method="POST">
+      <label for="NOMBRE COMPLETO">Nome Completo:</label>
+      <input type="text" id="nome" name="NOMBRE" required><br><br>
   
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br><br>
+      <label for="EMAIL">Email:</label>
+      <input type="email" id="email" name="EMAIL" required><br><br>
   
       <label for="telefone">Telefone (WhatsApp):</label>
       <div class="phone-input">
         <div class="country-select">
           <div class="selected-flag"></div>
-          <select id="country-code" name="country-code">
+          <select id="country-code" name="CODIGO DEL PAIS">
             <option value="" disabled selected>País</option>
             <option value="+55">BR</option>
             <option value="+54">AR</option>
@@ -65,32 +65,32 @@
             <option value="+1">US</option>
           </select>
         </div>
-        <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+        <input type="tel" id="telefone" name="TELEFONO" placeholder="Digite seu telefone">
       </div>
       <br>
 
       <label for="cliente">Cliente:</label>
-      <select id="cliente" name="cliente" required>
+      <select id="cliente" name="CLIENTE" required>
         <option value="" disabled selected>Selecione uma opção</option>
         <option value="agencia">Agência</option>
         <option value="privado">Privado</option>
       </select><br><br>
   
       <label for="tours">Turs:</label>
-      <select id="tours" name="tours" required>
+      <select id="tours" name="TOUR" required>
         <option value="" disabled selected>Selecione uma opção</option>
-        <option value="sem-bagagem">Adegas</option>
-        <option value="uma-por-pessoa">Shows de Tango</option>
-        <option value="uma-por-pessoa">Museos</option>
-        <option value="uma-por-pessoa">Montevideo</option>
-        <option value="uma-por-pessoa">Punta del Este</option>
-        <option value="uma-por-pessoa">Colonia del Sacramento</option>
-        <option value="mais-de-uma">Personalizado</option>
+        <option value="Adega">Adegas</option>
+        <option value="Show de Tango">Shows de Tango</option>
+        <option value="Museos">Museos</option>
+        <option value="Montevideo">Montevideo</option>
+        <option value="Punta del Este">Punta del Este</option>
+        <option value="Colonia del Sacramento">Colonia del Sacramento</option>
+        <option value="Personalizado">Personalizado</option>
       </select><br><br>
 
       <div class="form-row">
-        <label for="quantidade-pessoas">Quantidade de Pessoas:</label>
-        <select id="quantidade-pessoas" name="quantidade-pessoas" required>
+        <label for="CANTIDAD DE PERSONAS">Quantidade de Pessoas:</label>
+        <select id="CANTIDAD DE PERSONAS" name="CANTIDAD DE PERSONAS" required>
           <option value="" disabled selected>Selecione uma opção</option>
           <option value="1">1 pessoa</option>
           <option value="2">2 pessoas</option>
@@ -107,7 +107,7 @@
 
       <div class="form-row">
         <label for="bagagem">Bagagem por Pessoa:</label>
-        <select id="bagagem" name="bagagem" required>
+        <select id="bagagem" name="EQUIPAJE" required>
           <option value="" disabled selected>Selecione uma opção</option>
           <option value="0">Nenhuma bagagem</option>
           <option value="1">1 bagagem por pessoa</option>
@@ -125,19 +125,14 @@
       
       <div class="form-row">
         <label for="transporte-aeroporto">Transporte ao Aeroporto:</label>
-        <select id="transporte-aeroporto" name="transporte-aeroporto" required>
+        <select id="transporte-aeroporto" name="TRASLADO DEL AEROPUERTO" required>
           <option value="" disabled selected>Selecione uma opção</option>
-          <option value="sim">Sim</option>
-          <option value="nao">Não</option>
+          <option value="SI">Sim</option>
+          <option value="NO">Não</option>
         </select>
       </div>
       <label for="aclamacoes">Aclarações:</label>
-      <textarea id="aclamacoes" name="aclamacoes"></textarea><br><br>
-
-      <div class="captcha-container">
-        <div class="g-recaptcha" data-sitekey="SUA_CHAVE_DO_SITE"></div>
-      </div>
-      <br>
+      <textarea id="aclamacoes" name="ACLARECIONES"></textarea><br><br>
   
       <input type="submit" value="Enviar">
     </form>
@@ -178,32 +173,6 @@
         }
       });
     });
-  // Função para tratar o envio do formulário
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    // Verificar o CAPTCHA
-    var captchaResponse = grecaptcha.getResponse();
-    if (!captchaResponse) {
-      alert("Por favor, preencha o CAPTCHA.");
-      return;
-    }
-
-    // Aqui você pode prosseguir com o envio do formulário
-    // ou realizar qualquer outra ação necessária
-
-    // Exemplo de envio do formulário usando AJAX
-    var form = document.querySelector('form');
-    var formData = new FormData(form);
-    // ... envie o formData usando AJAX ...
-
-    // Exemplo de redirecionamento após o envio do formulário
-    window.location.href = "sucesso.html";
-  }
-
-  // Adicionar um ouvinte de evento ao formulário
-  var form = document.querySelector('form');
-  form.addEventListener('submit', handleSubmit);
   </script>
 </body>
 </html>
