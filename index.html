@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRIVE ME</title>
+  <link rel="shortcut icon" href="galeria/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/contato.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.google.com/recaptcha/api.js?render=SUA_CHAVE_DO_SITE"></script>
+</head>
+<body>
+  <header>
+    <div id="logo"><a href="index.html">DRIVE ME <span class="private"> Private Tours</span></a> </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Tours</a></li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Vehículos</a></li>
+        <li><a href="contato.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-icon">&#9776;</div>
+  </header>
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#">Tours</a></li>
+      <li><a href="#">Eventos</a></li>
+      <li><a href="#">Vehículos</a></li>
+      <li><a href="contato.html">Contacto</a></li>
+    </ul>
+  </div>
+  <div class="form-description">
+    <h2>Entre em contato</h2>
+    <p>Por favor, preencha o formulário abaixo com as informações necessárias. Entraremos em contato assim que possível.</p>
+  </div>
+  <div class="content">
+    <form method="post">
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required><br><br>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+  
+      <label for="telefone">Telefone (WhatsApp):</label>
+      <div class="phone-input">
+        <div class="country-select">
+          <div class="selected-flag"></div>
+          <select id="country-code" name="country-code">
+            <option value="" disabled selected>País</option>
+            <option value="+55">BR</option>
+            <option value="+54">AR</option>
+            <option value="+56">CL</option>
+            <option value="+57">CO</option>
+            <option value="+593">EC</option>
+            <option value="+502">GT</option>
+            <option value="+503">SV</option>
+            <option value="+504">HN</option>
+            <option value="+505">NI</option>
+            <option value="+507">PA</option>
+            <option value="+51">PE</option>
+            <option value="+598">UY</option>
+            <option value="+1">US</option>
+          </select>
+        </div>
+        <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+      </div>
+      <br>
+
+      <label for="cliente">Cliente:</label>
+      <select id="cliente" name="cliente" required>
+        <option value="" disabled selected>Selecione uma opção</option>
+        <option value="agencia">Agência</option>
+        <option value="privado">Privado</option>
+      </select><br><br>
+  
+      <label for="tours">Turs:</label>
+      <select id="tours" name="tours" required>
+        <option value="" disabled selected>Selecione uma opção</option>
+        <option value="sem-bagagem">Adegas</option>
+        <option value="uma-por-pessoa">Shows de Tango</option>
+        <option value="uma-por-pessoa">Museos</option>
+        <option value="uma-por-pessoa">Montevideo</option>
+        <option value="uma-por-pessoa">Punta del Este</option>
+        <option value="uma-por-pessoa">Colonia del Sacramento</option>
+        <option value="mais-de-uma">Personalizado</option>
+      </select><br><br>
+
+      <div class="form-row">
+        <label for="quantidade-pessoas">Quantidade de Pessoas:</label>
+        <select id="quantidade-pessoas" name="quantidade-pessoas" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="1">1 pessoa</option>
+          <option value="2">2 pessoas</option>
+          <option value="3">3 pessoas</option>
+          <option value="4">4 pessoas</option>
+          <option value="5">5 pessoas</option>
+          <option value="6">6 pessoas</option>
+          <option value="7">7 pessoas</option>
+          <option value="8">8 pessoas</option>
+          <option value="9">9 pessoas</option>
+          <option value="10">10 pessoas</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="bagagem">Bagagem por Pessoa:</label>
+        <select id="bagagem" name="bagagem" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="0">Nenhuma bagagem</option>
+          <option value="1">1 bagagem por pessoa</option>
+          <option value="2">2 bagagens por pessoa</option>
+          <option value="3">3 bagagens por pessoa</option>
+          <option value="4">4 bagagens por pessoa</option>
+          <option value="5">5 bagagens por pessoa</option>
+          <option value="6">6 bagagens por pessoa</option>
+          <option value="7">7 bagagens por pessoa</option>
+          <option value="8">8 bagagens por pessoa</option>
+          <option value="9">9 bagagens por pessoa</option>
+          <option value="10">10 bagagens por pessoa</option>
+        </select>
+      </div>
+      
+      <div class="form-row">
+        <label for="transporte-aeroporto">Transporte ao Aeroporto:</label>
+        <select id="transporte-aeroporto" name="transporte-aeroporto" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option>
+        </select>
+      </div>
+      <label for="aclamacoes">Aclarações:</label>
+      <textarea id="aclamacoes" name="aclamacoes"></textarea><br><br>
+
+      <div class="captcha-container">
+        <div class="g-recaptcha" data-sitekey="SUA_CHAVE_DO_SITE"></div>
+      </div>
+      <br>
+  
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+  
+  <footer class="footer">
+    <p>&copy; 2023 DRIVE ME. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    mobileMenuIcon.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+      mobileMenuIcon.classList.toggle('active');
+    });
+
+    document.addEventListener('click', function(event) {
+      const targetElement = event.target;
+      if (
+        !targetElement.classList.contains('mobile-menu-icon') &&
+        !targetElement.classList.contains('mobile-menu') &&
+        !targetElement.closest('.mobile-menu')
+      ) {
+        mobileMenu.classList.remove('active');
+        mobileMenuIcon.classList.remove('active');
+      }
+    });
+    window.addEventListener('DOMContentLoaded', function() {
+      // Obtém todas as opções de seleção
+      var selectOptions = document.querySelectorAll('select option');
+
+      // Percorre todas as opções e oculta a frase "Selecione uma opção"
+      selectOptions.forEach(function(option) {
+        if (option.value === '') {
+          option.style.display = 'none';
+        }
+      });
+    });
+  // Função para tratar o envio do formulário
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    // Verificar o CAPTCHA
+    var captchaResponse = grecaptcha.getResponse();
+    if (!captchaResponse) {
+      alert("Por favor, preencha o CAPTCHA.");
+      return;
+    }
+
+    // Aqui você pode prosseguir com o envio do formulário
+    // ou realizar qualquer outra ação necessária
+
+    // Exemplo de envio do formulário usando AJAX
+    var form = document.querySelector('form');
+    var formData = new FormData(form);
+    // ... envie o formData usando AJAX ...
+
+    // Exemplo de redirecionamento após o envio do formulário
+    window.location.href = "sucesso.html";
+  }
+
+  // Adicionar um ouvinte de evento ao formulário
+  var form = document.querySelector('form');
+  form.addEventListener('submit', handleSubmit);
+  </script>
+</body>
+</html>
