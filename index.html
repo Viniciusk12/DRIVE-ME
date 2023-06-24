@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="galeria/icon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/contato.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://www.google.com/recaptcha/api.js?render=SUA_CHAVE_DO_SITE"></script>
+  <script src="js/page.js"></script>
 </head>
 <body>
   <header>
@@ -86,19 +86,8 @@
       <div id="campoAdicional"></div>    
 
       <div class="form-row">
-        <label for="CANTIDAD DE PERSONAS">Quantidade de Pessoas:</label>
-        <select id="CANTIDAD DE PERSONAS" name="CANTIDAD DE PERSONAS" required>
-          <option value="" disabled selected>Selecione uma opção</option>
-          <option value="1">1 pessoa</option>
-          <option value="2">2 pessoas</option>
-          <option value="3">3 pessoas</option>
-          <option value="4">4 pessoas</option>
-          <option value="5">5 pessoas</option>
-          <option value="6">6 pessoas</option>
-          <option value="7">7 pessoas</option>
-          <option value="8">8 pessoas</option>
-          <option value="9">9 pessoas</option>
-          <option value="10">10 pessoas</option>
+        <label for="CANTIDAD DE PERSONAS">Numero de pessoas:</label>
+        <input type="number" id="pessoas" name="NUMERO DE PERSONAS" placeholder="Digite o numero de pessoas">
         </select>
       </div>
 
@@ -106,15 +95,25 @@
         <label for="bagagem">Bagagem total:</label>
         <select id="bagagem" name="EQUIPAJE" required>
           <option value="" disabled selected>Selecione uma opção</option>
-          <option value="0">Nenhuma mala</option>
-          <option value="1">1 mala</option>
-          <option value="2">2 malas</option>
-          <option value="3">3 malas</option>
-          <option value="4">4 malas</option>
-          <option value="5">5 malas</option>
+          <option value="0">Nenhuma</option>
+          <option value="1">1 bagagem de mão por pessoa</option>
+          <option value="2">1 mala grande por pessoa</option>
+          <option value="3">2 malas grandes por pessoa</option>
         </select>
       </div>
       
+      <div class="form-row">
+        <label for="fecha">Data do serviço</label>
+        <input type="date" id="data" name="FECHA" placeholder="">
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="hora">Hora do serviço</label>
+        <input type="time" id="hora" name="HORA" placeholder="">
+        </select>
+      </div>
+
       <label for="aclamacoes">Aclarações:</label>
       <textarea id="aclamacoes" name="ACLARECIONES"></textarea><br><br>
   
@@ -127,77 +126,25 @@
   </footer>
 
   <script>
-    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
-    const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+const mobileMenu = document.querySelector('.mobile-menu');
 
-    mobileMenuIcon.addEventListener('click', function() {
-      mobileMenu.classList.toggle('active');
-      mobileMenuIcon.classList.toggle('active');
-    });
+mobileMenuIcon.addEventListener('click', function() {
+  mobileMenu.classList.toggle('active');
+  mobileMenuIcon.classList.toggle('active');
+});
 
-    document.addEventListener('click', function(event) {
-      const targetElement = event.target;
-      if (
-        !targetElement.classList.contains('mobile-menu-icon') &&
-        !targetElement.classList.contains('mobile-menu') &&
-        !targetElement.closest('.mobile-menu')
-      ) {
-        mobileMenu.classList.remove('active');
-        mobileMenuIcon.classList.remove('active');
-      }
-    });
-    window.addEventListener('DOMContentLoaded', function() {
-      // Obtém todas as opções de seleção
-      var selectOptions = document.querySelectorAll('select option');
-
-      // Percorre todas as opções e oculta a frase "Selecione uma opção"
-      selectOptions.forEach(function(option) {
-        if (option.value === '') {
-          option.style.display = 'none';
-        }
-      });
-    });
-    function mostrarCampoAdicional() {
-  const servicosSelect = document.getElementById("servicos");
-  const campoAdicional = document.getElementById("campoAdicional");
-
-  // Limpar o campo adicional sempre que houver uma mudança
-  campoAdicional.innerHTML = "";
-
-  // Verificar a opção selecionada
-  const servicoSelecionado = servicosSelect.value;
-
-  // Se "Tours" for selecionado, mostrar opções de tours
-  if (servicoSelecionado === "tours") {
-    campoAdicional.innerHTML = `
-      <label for="opcoesTours">Opções de Tours:</label>
-      <select id="opcoesTours" name="opcoesTours" required>
-        <option value="" disabled selected>Selecione uma opção</option>
-        <option value="BODEGAS">Adegas</option>
-        <option value="Show de Tango">Show de Tango</option>
-        <option value="Museos">Museos</option>
-        <option value="Montevideo">Montevideo</option>
-        <option value="Punta del Este">Punta del Este</option>
-        <option value="Colonia del Sacramento">Colonia del Sacramento</option>
-        <option value="Personalizado">Personalizado (Informar em Aclarações)</option>
-      </select><br><br>
-    `;
+document.addEventListener('click', function(event) {
+  const targetElement = event.target;
+  if (
+    !targetElement.classList.contains('mobile-menu-icon') &&
+    !targetElement.classList.contains('mobile-menu') &&
+    !targetElement.closest('.mobile-menu')
+  ) {
+    mobileMenu.classList.remove('active');
+    mobileMenuIcon.classList.remove('active');
   }
-  // Se "Transporte" for selecionado, mostrar opções de transporte
-  else if (servicoSelecionado === "transporte") {
-    campoAdicional.innerHTML = `
-      <label for="opcoesTransporte">Opções de Transporte:</label>
-      <select id="opcoesTransporte" name="opcoesTransporte" required>
-        <option value="" disabled selected>Selecione uma opção</option>
-        <option value="Montevideo">Montevideo</option>
-        <option value="Punta del Este">Punta del Este</option>
-        <option value="transporte3">Colonia del Sacramento</option>
-        <option value="transporte3">Aeroporto</option>
-        <option value="Personalizado">Personalizado (Informar em Aclarações)</option>       
-      </select><br><br>
-    `;
-  }
-}
+});
   </script>
 </body>
 </html>
