@@ -1,170 +1,140 @@
-    /* Estilos gerais */
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-        font-weight: lighter;
-      }
+/* Estilos do formulário */
+form {
+    width: 410px;
+    margin: 0 auto;
+  }
   
-      /* Cabeçalho */
-      header {
-        background-color: #1d191d;
-        padding: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 50px;
-      }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
   
-      .private {
-        color: #fff;
-        font-size: 22px;
-      }
-  
-      a:hover {
-        opacity: 0.3;
-        transition: 0.4s;
-      }
-  
-      /* Logo */
-      #logo a {
-        color: #fff;
-        font-size: 30px;
-        text-decoration: none;
-      }
-  
-      /* Links do cabeçalho */
-      nav ul {
-        list-style: none;
-        display: flex;
-      }
-  
-      nav ul li {
-        margin-right: 50px;
-      }
-  
-      nav ul li:last-child {
-        margin-right: 0;
-      }
-  
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 24px;
-      }
-  
-      /* Ícone do menu móvel */
-      .mobile-menu-icon {
-        display: none;
-        font-size: 30px;
-        color: #fff;
-        cursor: pointer;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-      }
-  
-      .mobile-menu-icon.active {
-        background-color: #1d191d;
-        transition: background-color 0.3s ease-in-out;
-      }
-  
-      /* Menu móvel */
-      .mobile-menu {
-        display: none;
-        position: fixed;
-        top: 65px;
-        right: 0;
-        bottom: 0;
-        background-color: #1d191d;
-        padding: 30px;
-        transition: transform 0.5s ease-in-out;
-        transform: translateX(100%);
-      }
-  
-      .mobile-menu.active {
-        transform: translateX(0);
-      }
-  
-      .mobile-menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-  
-      .mobile-menu ul li {
-        margin-bottom: 80px;
-      }
-  
-      .mobile-menu ul li:last-child {
-        margin-bottom: 0;
-      }
-  
-      .mobile-menu ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 24px;
-      }
-  
-      .content {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-      }
-  
-      .content img {
-        width: 1100px;
-      }
-  
-      .footer {
-        margin-top: 50px;
-        font-size: 14px;
-        color: #272727;
-        text-align: center;
-      }
+  input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;margin-bottom: 10px;
+  }
 
-      
-      /* Estilos responsivos */
-      @media (max-width: 800px) {
-        /* Cabeçalho */
-        header {
-          flex-direction: column;
-          align-items: flex-start;
-        }
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
   
-        /* Logo */
-        #logo {
-          margin-bottom: 10px;
-        }
+  textarea {
+    width: 95%;
+    padding: 10px;
+    padding-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    background-color: #1d191d;
+    color: #fff;
+    cursor: pointer;
+  }
   
-        /* Links do cabeçalho */
-        nav ul {
-          margin-top: 10px;
-          display: none; /* Oculta os links do cabeçalho */
-        }
+  input[type="submit"]:hover {
+    opacity: 0.8;
+  }
   
-        /* Ícone do menu móvel */
-        .mobile-menu-icon {
-          display: block;
-        }
+  /* Alinhamento dos campos de seleção */
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><path d="M1.4 10.2L16 24.8l14.6-14.6c.8-.8.8-2 0-2.8s-2-.8-2.8 0L16 19.2l-11.8-11.8c-.8-.8-2-.8-2.8 0s-.8 2 0 2.8z"/></svg>') no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+  }
   
-        /* Menu móvel */
-        .mobile-menu {
-          display: block;
-        }
+  .content {
+    margin-top: 50px;
+  }
+
+  .form-description {
+    text-align: center;
+    margin-bottom: 30px;
+  }
   
-        .mobile-menu.active {
-          margin-top: 0;
-        }
+  .form-description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
   
-        /* Rodapé */
-        .footer {
-          padding: 10px;
-          text-align: center;
-        }
-      }
+  .form-description p {
+    font-size: 18px;
+    color: #272727;
+  }
+/* Estilo para o campo de telefone */
+.phone-input {
+  display: flex;
+  align-items: center;
+}
+
+.phone-input select {
+  padding: 10px 35px 10px 10px; /* Adiciona espaçamento interno no elemento select */
+  font-size: 16px;
+  width: 80px; /* Largura reduzida para exibir apenas o código do país */
+  margin-right: 5px; /* Espaçamento entre o campo de seleção de país e o campo de número */
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center; /* Ajusta a posição do background */
+  background-size: 10px auto;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.phone-input select option {
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  padding-left: 30px;
+}
+
+.phone-input input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+
+.phone-input input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-row label {
+  width: 340px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.form-row select {
+  flex: 1;
+  width: 360px;
+}
+
+  /* Responsividade */
+  @media (max-width: 800px) {
+    form {
+      width: 100%;
+      max-width: 410px;
+      padding: 0 20px;
+    }
+  }
+  
