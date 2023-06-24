@@ -1,6 +1,6 @@
 /* Estilos do formulário */
 form {
-    width: 420px;
+    width: 410px;
     margin: 0 auto;
   }
   
@@ -119,21 +119,21 @@ form {
 }
 
 .form-row label {
-  width: 360px;
+  width: 340px;
   margin-right: 10px;
   text-align: left;
 }
 
 .form-row select {
   flex: 1;
-  width: 400px;
+  width: 360px;
 }
 
   /* Responsividade */
   @media (max-width: 800px) {
     form {
       width: 100%;
-      max-width: 420px;
+      max-width: 410px;
       padding: 0 20px;
     }
   }
