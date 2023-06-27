@@ -124,11 +124,6 @@ form {
   text-align: left;
 }
 
-.form-row select {
-  flex: 1;
-  width: 360px;
-}
-
   /* Responsividade */
   @media (max-width: 800px) {
     form {

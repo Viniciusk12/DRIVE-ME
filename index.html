@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DRIVE ME</title>
   <link rel="shortcut icon" href="galeria/icon.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/contato.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/inicio.css">
   <script src="js/page.js"></script>
 </head>
 <body>
@@ -32,99 +32,19 @@
       <li><a href="contato.html">Contacto</a></li>
     </ul>
   </div>
-  <div class="form-description">
-    <h2>Entre em contato</h2>
-    <p>Por favor, preencha o formulário abaixo com as informações necessárias. Entraremos em contato assim que possível.</p>
+  <div class="container">
+  <div class="card">
+    <img src="galeria/Cards/vinicolas.jpg" alt="Imagem" class="image-container">
+    <div class="card-content">
+      <small> Adegas</small>
+      <p class="card-text">
+        Descubra a riqueza vinícola do Uruguai em nossos tours exclusivos em adegas oferecidos pela DRIVE ME, empresa sediada em Montevidéu. Explore algumas das principais vinícolas do país, como Bodega Bouza, Bodega Garzón e Bodega Juanicó (Familia Deicas). Nestas renomadas vinícolas, localizadas em cenários deslumbrantes, você terá a oportunidade de aprender sobre os métodos de produção, degustar vinhos premiados e desfrutar de uma experiência enriquecedora. Nossos guias especializados irão acompanhá-lo, proporcionando um tour personalizado e harmonizações gastronômicas de qualidade. Amplie seu conhecimento sobre a arte da vinificação no Uruguai em uma jornada enológica inesquecível com a DRIVE ME.</p>
+        <span class="info"><a href="#">Mais Infromações</a></span>
+      </div>
   </div>
-  <div class="content">
-    <form action="https://formsubmit.co/Viniciusmachadok9@gmail.com" method="POST">
-      <label for="NOMBRE COMPLETO">Nome Completo:</label>
-      <input type="text" id="nome" name="NOMBRE" required><br><br>
-  
-      <label for="EMAIL">Email:</label>
-      <input type="email" id="email" name="EMAIL" required><br><br>
-  
-      <label for="telefone">Telefone para contato (WhatsApp):</label>
-      <div class="phone-input">
-        <div class="country-select">
-          <div class="selected-flag"></div>
-          <select id="country-code" name="CODIGO DEL PAIS">
-            <option value="" disabled selected>País</option>
-            <option value="+55">BR</option>
-            <option value="+54">AR</option>
-            <option value="+56">CL</option>
-            <option value="+57">CO</option>
-            <option value="+593">EC</option>
-            <option value="+502">GT</option>
-            <option value="+503">SV</option>
-            <option value="+504">HN</option>
-            <option value="+505">NI</option>
-            <option value="+507">PA</option>
-            <option value="+51">PE</option>
-            <option value="+598">UY</option>
-            <option value="+1">US</option>
-          </select>
-        </div>
-        <input type="tel" id="telefone" name="TELEFONO" placeholder="Digite seu telefone">
-      </div>
-      <br>
-
-      <label for="cliente">Estou contratando para:</label>
-      <select id="cliente" name="CLIENTE" required>
-        <option value="" disabled selected>Selecione uma opção</option>
-        <option value="agencia">Agência</option>
-        <option value="privado">Privado</option>
-      </select><br><br>
-  
-      <label for="servicos">Desejo contratar o serviço de:</label>
-      <select id="servicos" name="servicos" required onchange="mostrarCampoAdicional()">
-        <option value="" disabled selected>Selecione uma opção</option>
-        <option value="tours">Tours</option>
-        <option value="transporte">Transporte</option>
-      </select><br><br>
-      
-      <div id="campoAdicional"></div>    
-
-      <div class="form-row">
-        <label for="CANTIDAD DE PERSONAS">Numero de pessoas:</label>
-        <input type="number" id="pessoas" name="NUMERO DE PERSONAS" placeholder="Digite o numero de pessoas">
-        </select>
-      </div>
-
-      <div class="form-row">
-        <label for="bagagem">Bagagem total:</label>
-        <select id="bagagem" name="EQUIPAJE" required>
-          <option value="" disabled selected>Selecione uma opção</option>
-          <option value="0">Nenhuma</option>
-          <option value="1">1 mala de mão por pessoa</option>
-          <option value="2">1 mala grande por pessoa</option>
-          <option value="3">2 malas grandes por pessoa</option>
-        </select>
-      </div>
-      
-      <div class="form-row">
-        <label for="fecha">Data do serviço</label>
-        <input type="date" id="data" name="FECHA" placeholder="">
-        </select>
-      </div>
-
-      <div class="form-row">
-        <label for="hora">Hora do serviço</label>
-        <input type="time" id="hora" name="HORA" placeholder="">
-        </select>
-      </div>
-
-      <label for="aclamacoes">Aclarações:</label>
-      <textarea id="aclamacoes" name="ACLARECIONES"></textarea><br><br>
-  
-      <input type="submit" value="Enviar">
-    </form>
-  </div>
-  
   <footer class="footer">
     <p>&copy; 2023 DRIVE ME. Todos los derechos reservados.</p>
   </footer>
-
   <script>
 const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
 const mobileMenu = document.querySelector('.mobile-menu');

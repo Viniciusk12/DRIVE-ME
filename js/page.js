@@ -23,7 +23,7 @@ const servicoSelecionado = servicosSelect.value;
 if (servicoSelecionado === "tours") {
 campoAdicional.innerHTML = `
   <label for="opcoesTours">Opções de Tours:</label>
-  <select id="opcoesTours" name="opcoesTours" required>
+  <select id="opcoesTours" name="OPCIONES DE TOUR" required>
     <option value="" disabled selected>Selecione uma opção</option>
     <option value="BODEGAS">Adegas</option>
     <option value="Show de Tango">Show de Tango</option>
@@ -39,7 +39,7 @@ campoAdicional.innerHTML = `
 else if (servicoSelecionado === "transporte") {
 campoAdicional.innerHTML = `
   <label for="opcoesTransporte">Opções de Transporte:</label>
-  <select id="opcoesTransporte" name="opcoesTransporte" required>
+  <select id="opcoesTransporte" name="OPCIONES DE TRASLADO" required>
     <option value="" disabled selected>Selecione uma opção</option>
     <option value="Montevideo">Montevideo</option>
     <option value="Punta del Este">Punta del Este</option>
@@ -49,4 +49,6 @@ campoAdicional.innerHTML = `
   </select><br><br>
 `;
 }
+
+
 }
