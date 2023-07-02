@@ -1,0 +1,130 @@
+.container {
+  margin: auto;
+  width: 80%;
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Define um contêiner flexível que contém os cards e permite a quebra de linha */
+
+.card {
+  max-width: 700px;
+  height: 960px;
+  background-color: #1d191d;
+  margin: auto;
+  flex: 1 0 45%; /* Define a largura dos cards */
+  margin-bottom: 30px;
+  position: relative;
+}
+/* Estiliza cada card dentro do contêiner e define a largura e margem inferior */
+
+.info {
+  width: 70%;
+  margin: auto;
+  background-color: #ebc28e;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
+/* Estiliza o bloco de informações com largura, altura, cor de fundo, tamanho de fonte, alinhamento e espaçamento interno */
+
+small:before {
+  content: "";
+  width: 80px;
+  height: 2px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 10px;
+  background: #ebc28e;
+}
+/* Adiciona uma linha horizontal antes do texto pequeno */
+
+small {
+  font-family: 'brandon-grotesque', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: #ebc28e;
+  margin: 30px;
+  display: block;
+  width: 100%;
+}
+/* Estiliza o texto pequeno com letras maiúsculas e espaçamento */
+
+p {
+  font-size: 22px;
+  color: #fff;
+  margin: 30px;
+  line-height: 1.5;
+}
+/* Estiliza o parágrafo com tamanho de fonte, cor e margens */
+
+a {
+  text-decoration: none;
+  color: #1d191d;
+  cursor: pointer;
+}
+/* Remove a decoração de link padrão e estiliza a cor do texto e cursor do mouse */
+
+.image-container {
+  width: 100%;
+  height: auto;
+}
+/* Define o tamanho da imagem dentro do card */
+
+.apre {
+  margin: auto;
+  width: 70%;
+  font-size: 24px;
+  color: #383838;
+  line-height: 1.5;
+  padding-bottom: 10px;
+}
+
+footer {
+  color: #1d191d;
+}
+
+hr {
+  width: 70%;
+  align-items: center;
+  margin-bottom: 30px;
+  opacity: 0.5;
+}
+
+/* Media Queries para dispositivos móveis e tablets */
+
+@media only screen and (max-width: 800px) {
+  .card {
+    flex-basis: 100%;
+    height: auto; /* Ajusta a altura dos cards para serem calculados automaticamente */
+    padding-bottom: 50px;
+  }
+
+  .info {
+    width: 70%; /* Ajusta a largura das informações para ocuparem toda a largura do card */
+    margin-top: 50px;
+    right: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .apre {
+    width: 80%; /* Ajusta a largura do texto com a descrição para ocupar toda a largura do card */
+    font-size: 22px;
+  }
+
+  small {
+    margin: 20px; /* Reduz a margem do texto pequeno */
+  }
+
+  p {
+    margin: 20px; /* Reduz a margem do parágrafo */
+  }
+}
