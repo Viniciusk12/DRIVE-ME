@@ -1,0 +1,127 @@
+.container {
+    margin: auto;
+    width: 90%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  /* Define um contêiner flexível que contém os cards e permite a quebra de linha */
+  
+.card {
+    max-width: 700px;
+    height: 600px;
+    background-color: #1d191d;
+    margin: auto;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 5px 10px 0 #474747;
+  }
+  /* Estiliza cada card dentro do contêiner e define a largura e margem inferior */
+  
+small:before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 10px;
+    background: #ebc28e;
+  }
+  /* Adiciona uma linha horizontal antes do texto pequeno */
+  
+small {
+    font-family: 'brandon-grotesque', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: #ebc28e;
+    margin: 30px;
+    display: block;
+    width: 100%;
+  }
+  /* Estiliza o texto pequeno com letras maiúsculas e espaçamento */
+  
+.card-text {
+    margin: 30px;
+  }
+  /* Estiliza o parágrafo com tamanho de fonte, cor e margens */
+  
+a {
+    text-decoration: none;
+    color: #1d191d;
+    cursor: pointer;
+  }
+  /* Remove a decoração de link padrão e estiliza a cor do texto e cursor do mouse */
+  
+.image-container {
+    width: 100%;
+  }
+  /* Define o tamanho da imagem dentro do card */
+  
+.apre {
+    margin: auto;
+    width: 70%;
+    font-size: 24px;
+    color: #383838;
+    line-height: 1.5;
+    padding-bottom: 10px;
+  }
+  
+footer {
+    color: #1d191d;
+  }
+  
+hr {
+    width: 70%;
+    align-items: center;
+    margin-bottom: 30px;
+    opacity: 0.5;
+  }
+
+.capa {
+    color: #fff;
+    font-size: 24px;
+  }
+
+.capa2 {
+    color: #ebc28e;
+    font-size: 24px;
+  }
+
+.baga {
+    color: #fff;
+    font-size: 24px;
+  }
+
+.baga2 {
+    color: #ebc28e;
+    font-size: 24px;
+  }
+  
+  /* Media Queries para dispositivos móveis e tablets */
+  
+  @media only screen and (max-width: 800px) {
+    .card {
+      width: 95%;
+      flex-basis: 100%;
+      height: 570px;
+    }
+  
+    .apre {
+      width: 95%; /* Ajusta a largura do texto com a descrição para ocupar toda a largura do card */
+      font-size: 18px;
+    }
+  
+    small {
+      margin: 20px; /* Reduz a margem do texto pequeno */
+    }
+  
+    p {
+      margin: 20px; /* Reduz a margem do parágrafo */
+    }
+    .card-text {
+      font-size: 18px;
+    }
+  }
+  
